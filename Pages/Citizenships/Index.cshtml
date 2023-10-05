@@ -1,0 +1,107 @@
+@page
+@model crm.Pages_Citizenships.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name: 
+            <input type="text" name="SearchString" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].Birthplace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].District)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].Ward)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].Birthdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].FatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].CitizenshipNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].PermanentAddrress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Citizenship[0].CitizenshipRegisterDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Citizenship) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthplace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.District)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ward)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CitizenshipNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PermanentAddrress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CitizenshipRegisterDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

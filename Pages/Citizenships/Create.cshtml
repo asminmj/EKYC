@@ -1,0 +1,85 @@
+@page
+@model crm.Pages_Citizenships.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+
+<h4>Citizenship</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Citizenship.Name" class="control-label"></label>
+                <input asp-for="Citizenship.Name" class="form-control" />
+                <span asp-validation-for="Citizenship.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.Birthplace" class="control-label"></label>
+                <input asp-for="Citizenship.Birthplace" class="form-control" />
+                <span asp-validation-for="Citizenship.Birthplace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.District" class="control-label"></label>
+                <input asp-for="Citizenship.District" class="form-control" />
+                <span asp-validation-for="Citizenship.District" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.Ward" class="control-label"></label>
+                <input asp-for="Citizenship.Ward" class="form-control" />
+                <span asp-validation-for="Citizenship.Ward" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.Birthdate" class="control-label"></label>
+                <input asp-for="Citizenship.Birthdate" class="form-control" />
+                <span asp-validation-for="Citizenship.Birthdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.FatherName" class="control-label"></label>
+                <input asp-for="Citizenship.FatherName" class="form-control" />
+                <span asp-validation-for="Citizenship.FatherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.Address" class="control-label"></label>
+                <input asp-for="Citizenship.Address" class="form-control" />
+                <span asp-validation-for="Citizenship.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.CitizenshipNumber" class="control-label"></label>
+                <input asp-for="Citizenship.CitizenshipNumber" class="form-control" />
+                <span asp-validation-for="Citizenship.CitizenshipNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.PermanentAddrress" class="control-label"></label>
+                <input asp-for="Citizenship.PermanentAddrress" class="form-control" />
+                <span asp-validation-for="Citizenship.PermanentAddrress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.Gender" class="control-label"></label>
+                <input asp-for="Citizenship.Gender" class="form-control" />
+                <span asp-validation-for="Citizenship.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Citizenship.CitizenshipRegisterDate" class="control-label"></label>
+                <input asp-for="Citizenship.CitizenshipRegisterDate" class="form-control" />
+                <span asp-validation-for="Citizenship.CitizenshipRegisterDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

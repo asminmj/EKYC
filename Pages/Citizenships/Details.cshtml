@@ -1,0 +1,85 @@
+@page "{id:int}"
+@model crm.Pages_Citizenships.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Citizenship</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.Birthplace)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.Birthplace)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.District)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.District)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.Ward)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.Ward)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.Birthdate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.Birthdate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.FatherName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.FatherName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.CitizenshipNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.CitizenshipNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.PermanentAddrress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.PermanentAddrress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Citizenship.CitizenshipRegisterDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Citizenship.CitizenshipRegisterDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Citizenship?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
